@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Information</title>
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+    <header>
+        <a href="lista_risco.html"><img src="imgs/logo_renault.png" alt="Logo Renault" id="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="lista_risco.html">List of Risks</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Risk Information</h1>
+
+    <main>
+        <form action="" id="form-monitoring">
+            <section class="risk-description">
+                <h2>Risk Description</h2>
+                <div class="input-group">
+                    <label for="risk">Risk:</label>
+                    <input type="text" id="risk" placeholder="Risk">
+                </div>
+                <div class="input-group">
+                    <label for="type-of-risk">Type of Risk:</label>
+                    <select id="type-of-risk">
+                        <option disabled selected>Type of Risk</option>
+                        <option value="conformity">Conformity</option>
+                        <option value="hr">Human Resources (HR)</option>
+                        <option value="operational">Operational</option>
+                        <option value="strategic">Strategic</option>
+                        <option value="technological">Technological</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="metier">Metier:</label>
+                    <select id="metier">
+                        <option disabled selected>Select Metier</option>
+                        <option value="apo">APO</option>
+                        <option value="dea-gop">DEA-GOP</option>
+                        <option value="dea-mm">DEA-MM</option>
+                        <option value="dea-pe">DEA-PE</option>
+                        <option value="dea-sc">DEA-SC</option>
+                        <option value="dea-si-sa-sm">DEA-SI/SA/SM</option>
+                        <option value="dea-td">DEA-TD</option>
+                        <option value="dea-va">DEA-VA</option>
+                        <option value="dea-vd">DEA-VD</option>
+                        <option value="de-vb">DE-VB</option>
+                        <option value="de-vd">DE-VD</option>
+                        <option value="ica">ICA</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sypply-chain">Sypply Chain</option>
+                    </select>
+                </div>
+            </section>
+            <section class="risk-details">
+                <div class="input-group">
+                    <label for="area-responsible">Area responsible:</label>
+                    <select id="area-responsible">
+                        <option disabled selected>Area responsible</option>
+                        <option value="apo">APO</option>
+                        <option value="dea-gop">DEA-GOP</option>
+                        <option value="dea-mm">DEA-MM</option>
+                        <option value="dea-pe">DEA-PE</option>
+                        <option value="dea-sc">DEA-SC</option>
+                        <option value="dea-si-sa-sm">DEA-SI/SA/SM</option>
+                        <option value="dea-td">DEA-TD</option>
+                        <option value="dea-va">DEA-VA</option>
+                        <option value="dea-vd">DEA-VD</option>
+                        <option value="de-vb">DE-VB</option>
+                        <option value="de-vd">DE-VD</option>
+                        <option value="ica">ICA</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sypply-chain">Sypply Chain</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="consequences">Consequences:</label>
+                    <input type="text" id="consequences" placeholder="Consequences">
+                </div>
+                <div class="input-group">
+                    <label for="risk-entry-date">Risk Entry Date:</label>
+                    <input type="date" id="risk-entry-date">
+                </div>
+                <div class="input-group">
+                    <label for="project">Project:</label>
+                    <input type="text" id="project" placeholder="Project">
+                </div>
+                <div class="input-group">
+                    <label for="jalon">Jalon:</label>
+                    <select id="jalon">
+                        <option disabled selected>Jalon</option>
+                        <option value="pre-concept">PRE-CONCEPT</option>
+                        <option value="concept-freeze">CONCEPT FREEZE</option>
+                        <option value="vpc">VPC</option>
+                        <option value="cost-confirmation">COST CONFIRMATION</option>
+                        <option value="contract">CONTRACT</option>
+                        <option value="tlc">TLC</option>
+                        <option value="abvc">ABVC</option>
+                        <option value="abpt">ABPT</option>
+                        <option value="ppc">PPC</option>
+                        <option value="sop">SOP</option>
+                    </select>
+                </div>
+            </section>
+            <section class="qualitative-analysis">
+                <h2>Qualitative Analysis</h2>
+                <div class="input-group">
+                    <label for="probabilit">Probabilit:</label>
+                    <select id="probabilit">
+                        <option disabled selected>Probabilit</option>
+                        <option value="very-low">Very low</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="very-high">Very High</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="impact">Impact:</label>
+                    <select id="impact">
+                        <option disabled selected>Impact</option>
+                        <option value="very-low">Very low</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="very-high">Very High</option>
+                    </select>
+                </div>
+            </section>
+        </form>
+
+
+            <form action="" id="form-response-plan">
+                <section class="response-plan">
+                    <h2>Response Plan</h2>
+
+                    <div class="input-group">
+                        <label for="pilot_name">Pilot Name:</label>
+                        <input type="text" id="pilot-name" placeholder="Pilot Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="pilot_id">Pilot ID:</label>
+                        <input type="text" id="pilot-id" placeholder="Pilot ID">
+                    </div>
+                    <div class="input-group">
+                        <label for="initial_date">Initial Date:</label>
+                        <input type="date" id="initial-date">
+                    </div>
+                    <div class="input-group">
+                        <label for="strategy">Strategy:</label>
+                        <select name="" id="strategy">
+                            <option disabled selected>Strategy</option>
+                            <option value="avoid">Avoid</option>
+                            <option value="mitigate">Mitigate</option>
+                            <option value="transfer">Transfer</option>
+                            <option value="accept">Accept</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="action">Action:</label>
+                        <input type="text" id="action" placeholder="Action">
+                    </div>
+                    <div class="input-group">
+                        <label for="alert_date">Alert Date:</label>
+                        <input type="date" name="" id="alert-date">
+                    </div>
+                    <div class="input-group">
+                        <label for="residual_probability">Residual Probability:</label>
+                        <select name="" id="residual-probabilit">
+                            <option disabled selected>Residual Probabilit</option>
+                            <option value="very-low">Very low</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="very-high">Very High</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="residual_impact">Residual Impact:</label>
+                        <select name="" id="residual-impact">
+                            <option disabled selected>Residual Impact</option>
+                            <option value="very-low">Very low</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="very-high">Very High</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="action_validation">Action Validation:</label>
+                        <select name="" id="action-validation">
+                            <option disabled selected>Action Validation</option>
+                            <option value="at-risk">At Risk</option>
+                            <option value="in-trajectory">In Trajectory</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="does-not-apply">Does Not Apply Yet</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="risk_validation">Risk Validation:</label>
+                        <select name="" id="risk-validation">
+                            <option disabled selected>Risk Validation</option>
+                            <option value="at-risk">At Risk</option>
+                            <option value="in-trajectory">In Trajectory</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="problem">Problem</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="resolution_date">Resolution Date:</label>
+                        <input type="date" name="" id="resolution-date">
+                    </div>
+                    <div class="input-group">
+                        <label for="capitalization">Capitalization:</label>
+                        <select name="" id="capitalization">
+                            <option disabled selected>Capitalization</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments"></textarea>
+                    </div> 
+                </section>
+                
+                <div class="buttons">
+                    <button id="salvar-alteracoes">Salvar</button>
+                </div>
+            </form>
+
+            <section class="container">
+                <h2>Versões</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Versão</th>
+                            <th>Data</th>
+                            <th>Responsável</th>
+                            <th>Atividade</th>
+                        </tr>
+                    </thead>
+                    <tbody class="historico-alteracoes">
+                        <!-- Dados do banco -->
+                    </tbody>
+                </table>
+            </section>
+        
+    </main>
+
+<script src="detalhes.js"></script>
+</body>
+</html>

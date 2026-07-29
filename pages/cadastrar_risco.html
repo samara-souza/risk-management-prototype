@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Monitoring</title>
+    <link rel="stylesheet" href="cadastrar_risco.css">
+</head>
+
+<body>
+    <header>
+        <a href="lista_risco.html"><img src="imgs/logo_renault.png" alt="Renault Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="lista_risco.html">List of Risks</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="" id="form-monitoring">
+            <h1>Risk Monitoring</h1>
+            <section class="risk-description">
+                <h2>Risk Description</h2>
+                <div class="input-group">
+                    <label for="risk">Risk:</label>
+                    <input type="text" id="risk" placeholder="Risk">
+                    <div id="suggestions">
+                        <ul id="suggestions-list"></ul>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="type-of-risk">Type of Risk:</label>
+                    <select id="type-of-risk">
+                        <option disabled selected>Type of Risk</option>
+                        <option value="conformity">Conformity</option>
+                        <option value="hr">Human Resources (HR)</option>
+                        <option value="operational">Operational</option>
+                        <option value="strategic">Strategic</option>
+                        <option value="technological">Technological</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="metier">Metier:</label>
+                    <select id="metier">
+                        <option disabled selected>Select Metier</option>
+                        <option value="apo">APO</option>
+                        <option value="dea-gop">DEA-GOP</option>
+                        <option value="dea-mm">DEA-MM</option>
+                        <option value="dea-pe">DEA-PE</option>
+                        <option value="dea-sc">DEA-SC</option>
+                        <option value="dea-si-sa-sm">DEA-SI/SA/SM</option>
+                        <option value="dea-td">DEA-TD</option>
+                        <option value="dea-va">DEA-VA</option>
+                        <option value="dea-vd">DEA-VD</option>
+                        <option value="de-vb">DE-VB</option>
+                        <option value="de-vd">DE-VD</option>
+                        <option value="ica">ICA</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sypply-chain">Sypply Chain</option>
+                    </select>
+                </div>
+            </section>
+            <section class="risk-details">
+                <div class="input-group">
+                    <label for="area-responsible">Area responsible:</label>
+                    <select id="area-responsible">
+                        <option disabled selected>Area responsible</option>
+                        <option value="apo">APO</option>
+                        <option value="dea-gop">DEA-GOP</option>
+                        <option value="dea-mm">DEA-MM</option>
+                        <option value="dea-pe">DEA-PE</option>
+                        <option value="dea-sc">DEA-SC</option>
+                        <option value="dea-si-sa-sm">DEA-SI/SA/SM</option>
+                        <option value="dea-td">DEA-TD</option>
+                        <option value="dea-va">DEA-VA</option>
+                        <option value="dea-vd">DEA-VD</option>
+                        <option value="de-vb">DE-VB</option>
+                        <option value="de-vd">DE-VD</option>
+                        <option value="ica">ICA</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sypply-chain">Sypply Chain</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="consequences">Consequences:</label>
+                    <input type="text" id="consequences" placeholder="Consequences">
+                    <div id="consequences-suggestions">
+                        <ul id="consequences-suggestions-list"></ul>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="risk-entry-date">Risk Entry Date:</label>
+                    <input type="date" id="risk-entry-date">
+                </div>
+                <div class="input-group">
+                    <label for="project">Project:</label>
+                    <input type="text" id="project" placeholder="Project">
+                    <div id="project-suggestions">
+                        <ul id="project-suggestions-list"></ul>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="jalon">Jalon:</label>
+                    <select id="jalon">
+                        <option disabled selected>Jalon</option>
+                        <option value="pre-concept">PRE-CONCEPT</option>
+                        <option value="concept-freeze">CONCEPT FREEZE</option>
+                        <option value="vpc">VPC</option>
+                        <option value="cost-confirmation">COST CONFIRMATION</option>
+                        <option value="contract">CONTRACT</option>
+                        <option value="tlc">TLC</option>
+                        <option value="abvc">ABVC</option>
+                        <option value="abpt">ABPT</option>
+                        <option value="ppc">PPC</option>
+                        <option value="sop">SOP</option>
+                    </select>
+                </div>
+            </section>
+            <section class="qualitative-analysis">
+                <h2>Qualitative Analysis</h2>
+                <div class="input-group">
+                    <label for="probabilit">Probabilit:</label>
+                    <select id="probabilit">
+                        <option disabled selected>Probabilit</option>
+                        <option value="very-low">Very low</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="very-high">Very High</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="impact">Impact:</label>
+                    <select id="impact">
+                        <option disabled selected>Impact</option>
+                        <option value="very-low">Very low</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="very-high">Very High</option>
+                    </select>
+                </div>
+            </section>
+            <section class="response-plan">
+                <h2><a href="response_plan.html">Response Plan</a></h2>
+            </section>
+            <div class="buttons">
+                <button id="cancelar">Cancelar</button>
+                <button id="cadastrar">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const riskInputField = document.getElementById('risk');
+        const consequencesInputField = document.getElementById('consequences');
+        const projectInputField = document.getElementById('project');
+
+        const riskSuggestionsDiv = document.getElementById('suggestions');
+        const consequencesSuggestionsDiv = document.getElementById('consequences-suggestions');
+        const projectSuggestionsDiv = document.getElementById('project-suggestions');
+
+        const riskSuggestionsList = [
+            'Ausência',
+            'critério',
+            'TCS',
+            'presença',
+            'indevido',
+            'dossiers',
+            'configuração',
+            'Congelamento',
+            'tardio',
+            'DT',
+            'congelamento',
+            'faltando',
+            'informações',
+            'Criação',
+            'Outsider',
+            'Decalagem',
+            'TGA',
+            'DOC',
+            'Série',
+            'postergação',
+            'Decisão',
+            'tardia',
+            'mudança',
+            'lançamento',
+            'veículo',
+            'Beige',
+            'Dune',
+            'lugar',
+            'Blanc',
+            'Quartz',
+            'Desalinhamento',
+            'Produto',
+            'Mecânica',
+            'aplicação',
+            'Stop',
+            'Start',
+            'veículos',
+            'gasolina',
+            'Diferença',
+            'presentes',
+            'Definições',
+            'DaG',
+            'DaD',
+            'responsáveis',
+            'DTs',
+            'detectadas',
+            'VCs',
+            'Dificuldade',
+            'DEVOs',
+            'GESC',
+            'Projeto',
+            'India',
+            'Documentação',
+            'aval',
+            'incompleta',
+            'Russia',
+            'DCL',
+            'CAP',
+            'Paper',
+            'Contract',
+            'Evoluções',
+            'DP',
+            'DIM',
+            'motor',
+            'analisadas',
+            'previamente',
+            'CMP',
+            'Excesso',
+            'carga',
+            'Falta',
+            'preenchimento',
+            'ISTs',
+            'engajamento',
+            'PFE',
+            'GFE',
+            'nomeação',
+            'PROJECTEUR',
+            'HALOGENE',
+            'VARROC',
+            'BRASIL',
+            'INDUSTRIA',
+            'COMERC',
+            'FEU',
+            'AR',
+            'RAIDISSEUR',
+            'PAVILLON',
+            'AV',
+            'PARTIE',
+            'CARCOUSTICS',
+            'ESPANA',
+            'SA',
+            'Férias',
+            'Corporate',
+            'Romenia',
+            'Fichas',
+            'Gamas',
+            'lançadas',
+            'erradas',
+            'opcionais',
+            'Fornecedor',
+            'SED',
+            'firme',
+            'ENJOLIVEUR',
+            'SUP',
+            'GRILLE',
+            'CALANDRE',
+            'Inclusão',
+            'ESP',
+            'Colômbia',
+            'México',
+            'Cp',
+            'Indefinição',
+            'fluxo',
+            'Logístico',
+            'fnr',
+            'RIDUCO',
+            'países',
+            'existência',
+            'Cross',
+            'Argentina',
+            'disponibilização',
+            'PSW',
+            'especificação',
+            'pedidos',
+            'standard',
+            'prazo',
+            'previsto',
+            'atender',
+            'PT',
+            'AERATEUR',
+            'CTL',
+            'PDB',
+            'ter',
+            'linx',
+            'finalizado',
+            'construção',
+            'cascade',
+            'disponibilizada',
+            'Engenharia',
+            'Processo',
+            'Passar',
+            'referência',
+            'indice',
+            'Caixa',
+            'Alongada',
+            'Peças',
+            'trazidas',
+            'Proto',
+            'VC',
+            'VP',
+            'VU',
+            'départ',
+            'GF',
+            'VIS',
+            'FIX',
+            'TUYAU',
+            'ENTRE',
+            'DETENDEUR',
+            'ET',
+            'COMPRESSEUR',
+            'DU',
+            'RESERVOIR',
+            'EQUIPE',
+            'SUR',
+            'CAISSE',
+            'carry',
+            'over',
+            'Europa',
+            'volume',
+            'Brasil',
+            'CO',
+            'HJD',
+            'Mex',
+            'HHA',
+            'PFEs',
+            'alinhados',
+            'Prazo',
+            'Problemas',
+            'sincronização',
+            'One',
+            'Redução',
+            'antecipação',
+            'QCVs',
+            'Resistência',
+            'DE',
+            'VB',
+            'ferramenta',
+            'Risco',
+            'ferramental',
+            'fornecedor',
+            'Rochling',
+            'recondução',
+            'afetação',
+            'qualidade',
+            'validação',
+            'capacitário',
+            'POI',
+            'UAS',
+            'Solicitação',
+            'criação',
+            'apontamento',
+            'balanço',
+            'Linhas',
+            'SAUF',
+            'veiculo',
+            'BASE',
+            'Atraso',
+            'fornecedores',
+            'RENAULT',
+            'Perda',
+            'rastreabilidade',
+            'relação',
+            'OneTD',
+            'Signe',
+            'Lista',
+            'Recondução',
+            'completa'];
+
+        const consequencesSuggestionsList = [
+            'MTC',
+            'veículo',
+            'incompatível',
+            'dossier',
+            'funcionamento',
+            'Atraso',
+            'DOC',
+            'Jalon',
+            'ABVC',
+            'Evolução',
+            'documental',
+            'DP',
+            'TCS',
+            'Signe',
+            'recursos',
+            'limitados',
+            'Redução',
+            'prazo',
+            'PLDA',
+            'AFF',
+            'TDU',
+            'Indisponibilidade',
+            'peça',
+            'Bloqueio',
+            'regularização',
+            'Motor',
+            'Cp',
+            'atraso',
+            'planning',
+            'Especificação',
+            'divergente',
+            'DT',
+            'SIGNE',
+            'comuns',
+            'DaG',
+            'distintas',
+            'Ausência',
+            'especificação',
+            'Falta',
+            'erradas',
+            'PT',
+            'Sobrecusto',
+            'Projeto',
+            'qualidade',
+            'Transporte',
+            'previsto',
+            'Gama',
+            'releitura',
+            'Retrabalhos',
+            'previstos',
+            'impacto',
+            'Homologação',
+            'possibilidde',
+            'problemas',
+            'documentar',
+            'Definião',
+            'Técnica',
+            'incompleta',
+            'VPC',
+            'informação',
+            'QCDPs',
+            'envolvidas',
+            'Engenharia',
+            'Supply',
+            'Compras',
+            'Estimativa',
+            'Custo',
+            'errada',
+            'carro',
+            'Impossibilidde',
+            'DEVOS',
+            'PGs',
+            'Carros',
+            'lançados',
+            'combinações',
+            'DLI',
+            'Revisão',
+            'documentação',
+            'Fluxo',
+            'Decalagem',
+            'Doc',
+            'plannig',
+            'Causando',
+            'Risco',
+            'PPC',
+            'Pedidos',
+            'EDI',
+            'hors',
+            'transporte',
+            'aéreo',
+            'Sourcing',
+            'FNR',
+            'marítimo',
+            'carroceria',
+            'sourcing',
+            'fabricação',
+            'montagem',
+            'montadas',
+            'assemblés',
+            'aprovisionamento',
+            'consequente',
+            'projeto',
+            'Faltar',
+            'montabilidade',
+            'solução',
+            'arrêt',
+            'backup',
+            'problema',
+            'Aprovisionamento',
+            'absorver',
+            'mudanças',
+            'congelamento',
+            'Mudanças',
+            'LUP',
+            'atingir',
+            'QCVs',
+            'faltando',
+            'Maquete',
+            'robusta',
+            'fabricadas',
+            'faltar',
+            'Usina',
+            'Curitiba',
+            'PFE',
+            'cascade',
+            'EQM',
+            'desfavorável',
+            'Perder',
+            'Ausencia',
+            'Logistica',
+            'DERIVADO',
+            'sobrecusto',
+            'necessidade',
+            'Frete',
+            'Aereo',
+            'Problemas',
+            'atrasos',
+            'Planning',
+            'validação',
+            'tardia'];
+
+        const projectSuggestionsList = [
+            'CARRO',
+            'carro',
+            'Todos'
+        ];
+
+        function getSuggestions(inputValue, suggestionsList) {
+            const words = inputValue.split(' ');
+            const lastWord = words[words.length - 1];
+            const suggestions = [];
+            for (const suggestion of suggestionsList) {
+                if (suggestion.startsWith(lastWord)) {
+                    suggestions.push(suggestion);
+                }
+            }
+            return suggestions;
+        }
+
+        riskInputField.addEventListener('input', (e) => {
+            const inputValue = e.target.value;
+            const suggestions = getSuggestions(inputValue, riskSuggestionsList);
+
+            const suggestionsListElement = document.getElementById('suggestions-list');
+            suggestionsListElement.innerHTML = '';
+            suggestions.forEach((suggestion) => {
+                const suggestionListItem = document.createElement('li');
+                suggestionListItem.textContent = suggestion;
+                suggestionListItem.addEventListener('click', () => {
+                    const words = inputValue.split(' ');
+                    words[words.length - 1] = suggestion;
+                    riskInputField.value = words.join(' ');
+                    riskSuggestionsDiv.style.display = 'none';
+
+                    riskInputField.focus();
+                    riskInputField.setSelectionRange(riskInputField.value.length, riskInputField.value.length);
+                });
+                suggestionsListElement.appendChild(suggestionListItem);
+            });
+            if (suggestions.length > 0) {
+                riskSuggestionsDiv.style.display = 'block';
+            } else {
+                riskSuggestionsDiv.style.display = 'none';
+            }
+        });
+
+        consequencesInputField.addEventListener('input', (e) => {
+            const inputValue = e.target.value;
+            const suggestions = getSuggestions(inputValue, consequencesSuggestionsList);
+
+            const suggestionsListElement = document.getElementById('consequences-suggestions-list');
+            suggestionsListElement.innerHTML = '';
+            suggestions.forEach((suggestion) => {
+                const suggestionListItem = document.createElement('li');
+                suggestionListItem.textContent = suggestion;
+                suggestionListItem.addEventListener('click', () => {
+                    const words = inputValue.split(' ');
+                    words[words.length - 1] = suggestion;
+                    consequencesInputField.value = words.join(' ');
+                    consequencesSuggestionsDiv.style.display = 'none';
+
+                    consequencesInputField.focus();
+                    consequencesInputField.setSelectionRange(consequencesInputField.value.length, consequencesInputField.value.length);
+                });
+                suggestionsListElement.appendChild(suggestionListItem);
+            });
+            if (suggestions.length > 0) {
+                consequencesSuggestionsDiv.style.display = 'block';
+            } else {
+                consequencesSuggestionsDiv.style.display = 'none';
+            }
+        });
+
+        projectInputField.addEventListener('input', (e) => {
+            const inputValue = e.target.value;
+            const suggestions = getSuggestions(inputValue, projectSuggestionsList);
+
+            const suggestionsListElement = document.getElementById('project-suggestions-list');
+            suggestionsListElement.innerHTML = '';
+            suggestions.forEach((suggestion) => {
+                const suggestionListItem = document.createElement('li');
+                suggestionListItem.textContent = suggestion;
+                suggestionListItem.addEventListener('click', () => {
+                    const words = inputValue.split(' ');
+                    words[words.length - 1] = suggestion;
+                    projectInputField.value = words.join(' ');
+                    projectSuggestionsDiv.style.display = 'none';
+
+                    projectInputField.focus();
+                    projectInputField.setSelectionRange(projectInputField.value.length, projectInputField.value.length);
+                });
+                suggestionsListElement.appendChild(suggestionListItem);
+            });
+            if (suggestions.length > 0) {
+                projectSuggestionsDiv.style.display = 'block';
+            } else {
+                projectSuggestionsDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

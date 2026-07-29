@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Riscos</title>
+    <link rel="stylesheet" href="lista_risco.css">
+</head>
+<body>
+    <header>
+        <a href="lista_risco.html"><img src="imgs/logo_renault.png" alt="Logo Renault"></a>
+        <nav>
+            <ul>
+                <li><a href="cadastrar_risco.html">Create Risk</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Risk</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Cod/name of risk" id="search-input">
+        </div>
+        <div class="risks">
+            <div class="risk-cards">
+                <!-- Cards de riscos serão renderizados aqui -->
+            </div>
+            <div class="riscos-desativados">
+                <!-- Riscos desativados -->
+            </div>
+        </div>
+    </main>
+    <script src="lista_risco.js"></script>
+</body>
+</html>
